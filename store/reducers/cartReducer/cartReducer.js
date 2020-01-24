@@ -17,7 +17,6 @@ const initialState = {
 };
 let order = {
   bread: {qnt:3, totalPrice : 280},
-
 };
 const cartReducer = (state = initialState, action)=> {
   const curState = {...state.order};
@@ -100,7 +99,7 @@ const cartReducer = (state = initialState, action)=> {
     case ORDER_FAILURE:
       return {...state, ordering: false, error: action.error};
     case INIT_CART:
-      return {...state, order: {}, totalPrice: 150};
+      return {...state, order: {}, totalPrice: 0};
     default:
       return state
   }

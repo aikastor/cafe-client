@@ -24,7 +24,7 @@ export const createOrder = order => {
   return async (dispatch) => {
     try {
       dispatch (orderRequest());
-      await axiosApi.post('cafeOrders.json', order);
+      await axiosApi.post('react-cafe-orders.json', order);
       dispatch(orderSuccess());
     } catch (e) {
       dispatch(orderFailure(e))
